@@ -14,7 +14,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 			if (selector === 'label' && (!element.hasAttribute('for') && element.firstElementChild.tagName !== 'INPUT')) {
 				return;
 			}
-			element.classList.add('cursor-none');
+			element.classList.add('cursor-none-ll');
 			element.addEventListener('mouseenter', addCursorHover);
 			element.addEventListener('mouseleave', removeCursorHover);
 		})
