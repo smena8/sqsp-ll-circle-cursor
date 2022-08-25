@@ -1,8 +1,14 @@
 window.addEventListener('DOMContentLoaded', (event) => {
 	const cursorElem = document.createElement('div');
 	cursorElem.setAttribute('class', 'cursor-ll');
-	document.querySelector("#siteWrapper").parentElement.prepend(cursorElem);
-	document.querySelector("#siteWrapper").parentElement.classList.add('cursor-none-ll');
+	let bodyElemLL;
+	if (document.querySelector("#siteWrapper") !== null) {
+		bodyElemLL = document.querySelector("#siteWrapper").parentElement;
+	} else {
+		bodyElemLL = document.querySelector("body")
+	}
+	bodyElemLL.prepend(cursorElem);
+	bodyElemLL.classList.add('cursor-none-ll');
 
 	const cursor = document.querySelector('.cursor-ll');
 
